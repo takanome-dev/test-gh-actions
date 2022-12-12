@@ -15,5 +15,3 @@ jobs:
         uses: takanome-dev/assign-issue-action@master
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
-          required_label: good-first-issue # you can change this label if you wish
-          assigned_label: Is-Assigned # you can change this label if you wish
