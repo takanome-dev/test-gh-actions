@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Assign the user or unassign stale assignments
-        uses: takanome-dev/assign-issue-action@beta
+        uses: takanome-dev/assign-issue-action@master
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
           required_label: good-first-issue # you can change this label if you wish
