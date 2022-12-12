@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Assign the user or unassign stale assignments
-        uses: takanome-dev/assign-issue-action@master
+        uses: takanome-dev/assign-issue-action@debug
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
