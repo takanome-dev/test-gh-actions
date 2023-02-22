@@ -1,0 +1,21 @@
+name: Prettify Action
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  prettify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
+
+      - name: Prettify
+        uses: takanome-dev/prettify-action@beta
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
