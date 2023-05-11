@@ -1,8 +1,7 @@
 name: Issue Compliance
 
 on:
-  issue_comment:
-    types: [created,edited]
+  issues:
   workflow_dispatch:
 
 # Action should have write permission to make updates to PR
