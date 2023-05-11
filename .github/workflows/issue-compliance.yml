@@ -1,0 +1,19 @@
+name: Issue Compliance
+
+on:
+  issue_comment:
+    types: [created,edited]
+  workflow_dispatch:
+
+# Action should have write permission to make updates to PR
+permissions:
+  issues: write
+  
+jobs:
+  issue-compliance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint issue
+        uses: takanome-dev/issue-compliance-action@feat-lint-issue-title
+        with:
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
