@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lint issue
-        uses: takanome-dev/issue-compliance-action@0.1.0
+        uses: takanome-dev/issue-compliance-action@refactor-update-docs
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
