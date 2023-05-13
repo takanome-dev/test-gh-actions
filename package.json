@@ -1,22 +1,22 @@
 {
-  "name": "typescript-template",
+  "name": "test-gh-actions",
   "version": "1.0.0",
-  "description": "TypeScript Template Repository",
+  "description": "This repo is solely for testing GitHub Actions.",
   "main": "",
   "scripts": {
     "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TAKANOME-DEV/typescript-template.git"
+    "url": "git+https://github.com/takanome-dev/test-gh-actions.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TAKANOME-DEV/typescript-template/issues"
+    "url": "https://github.com/takanome-dev/test-gh-actions/issues"
   },
-  "homepage": "https://github.com/TAKANOME-DEV/typescript-template#readme",
+  "homepage": "https://github.com/takanome-dev/test-gh-actions#readme",
   "devDependencies": {
     "@babel/core": "7.20.2",
     "@babel/eslint-parser": "^7.17.0",

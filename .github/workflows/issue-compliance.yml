@@ -7,12 +7,16 @@ on:
 # Action should have write permission to make updates to PR
 permissions:
   issues: write
-  
+
 jobs:
   issue-compliance:
     runs-on: ubuntu-latest
     steps:
-      - name: Lint issue
+      - name: Lint issue compliance
         uses: takanome-dev/issue-compliance-action@v0.2
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
+          issue-template-types: |
+            Enhancement
+            Bug
+            Docs
