@@ -14,4 +14,5 @@ jobs:
       - name: Assign the user or unassign stale assignments
         uses: takanome-dev/assign-issue-action@v2.0.0
         with:
-          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          github_token: '${{ secrets.GH_SUPERUSER_TOKEN }}'
+          # github_token: '${{ secrets.GITHUB_TOKEN }}'
