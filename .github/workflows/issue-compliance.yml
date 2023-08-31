@@ -13,10 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lint issue compliance
-        uses: takanome-dev/issue-compliance-action@v0.2
+        uses: takanome-dev/issue-compliance-action@feat-lint-issue-title
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
           issue-template-types: |
             Enhancement
             Bug
             Docs
+          forbidden-characters: |
+            @
+          default-title: 'rule-name'
