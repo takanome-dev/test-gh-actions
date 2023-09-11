@@ -16,11 +16,5 @@ jobs:
         uses: takanome-dev/issue-compliance-action@feat-lint-issue-title
         with:
           token: '${{ secrets.GITHUB_TOKEN }}'
-          issue-template-types: |
-            Enhancement
-            Bug
-            Docs
-          forbidden-characters: |
-            @
-          default-title: 'rule-name'
+          forbidden-characters: '@'
           label: ' 🙅 invalid'
