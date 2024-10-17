@@ -19,10 +19,17 @@ jobs:
           # github_token: '${{ secrets.GH_SUPERUSER_TOKEN }}'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           maintainers: takanome-dev
+          
       - name: On successful assignment
         if: steps.assign.outputs.assigned == 'yes'
-        run: echo "User was successfully assigned, performing next steps..."
-
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: 'User was successfully assigned, performing next steps...'
+          
       - name: On failed assignment
         if: steps.assign.outputs.assigned == 'no'
-        run: echo "Assignment failed, no further action will be taken."
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: 'Assignment failed, no further action will be taken.'
