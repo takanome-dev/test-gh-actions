@@ -19,18 +19,19 @@ jobs:
         with:
           # github_token: '${{ secrets.GH_SUPERUSER_TOKEN }}'
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          maintainers: takanome-dev
+          maintainers:
+            - takanome-dev
           
-      - name: On successful assignment
-        if: steps.assign.outputs.assigned == 'yes'
-        uses: peter-evans/create-or-update-comment@v4
-        with:
-          issue-number: ${{ github.event.issue.number }}
-          body: 'User was successfully assigned, performing next steps...'
+      # - name: On successful assignment
+      #   if: steps.assign.outputs.assigned == 'yes'
+      #   uses: peter-evans/create-or-update-comment@v4
+      #   with:
+      #     issue-number: ${{ github.event.issue.number }}
+      #     body: 'User was successfully assigned, performing next steps...'
           
-      - name: On failed assignment
-        if: steps.assign.outputs.assigned == 'no'
-        uses: peter-evans/create-or-update-comment@v4
-        with:
-          issue-number: ${{ github.event.issue.number }}
-          body: 'Assignment failed, no further action will be taken.'
+      # - name: On failed assignment
+      #   if: steps.assign.outputs.assigned == 'no'
+      #   uses: peter-evans/create-or-update-comment@v4
+      #   with:
+      #     issue-number: ${{ github.event.issue.number }}
+      #     body: 'Assignment failed, no further action will be taken.'
