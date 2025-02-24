@@ -17,8 +17,8 @@ jobs:
         id: assign
         uses: takanome-dev/assign-issue-action@fix-rate-limit-err
         with:
-          github_token: '${{ secrets.GH_SUPERUSER_TOKEN }}'
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          # github_token: '${{ secrets.GH_SUPERUSER_TOKEN }}'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           maintainers: takanome-dev
           enable_auto_suggestion: true
           
