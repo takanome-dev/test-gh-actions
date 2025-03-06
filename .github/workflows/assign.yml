@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Assign the user or unassign stale assignments
         id: assign
-        uses: takanome-dev/assign-issue-action@fix-rate-limit-err
+        uses: takanome-dev/assign-issue-action@beta
         with:
           github_token: '${{ secrets.GH_SUPERUSER_TOKEN }}'
           # github_token: ${{ secrets.GITHUB_TOKEN }}
